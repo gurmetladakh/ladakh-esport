@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ladakh Esports | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Loader (keeps your existing behavior) -->
+ <!-- Loader -->
+<div id="loader">
+  <div class="loader-content">
+    <img src="assets/controller.png" alt="Loading" class="spin">
+    <h2>Ladakh Esports</h2>
+    <p>Loading...</p>
+  </div>
+</div>
+
+  <!-- Header -->
+  <header class="nav">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <span class="brand-text">Ladakh Esports</span>
+    </div>
+    <nav class="menu">
+      <a href="index.html" class="active">Home</a>
+      <a href="notification.html">Notifications</a>
+      <a href="registration.html">Registration</a>
+      <a href="event.html">Events</a>
+      <a href="contact.html" class="btn btn--sm">Sign Up</a>
+    </nav>
+  </header>
+
+  <!-- HERO (inspired by your reference) -->
+  <section class="hero hero--console">
+    <div class="hero__content">
+      <h1><span>Ladakh </span> Esports</h1>
+      <p>
+        Building a professional competitive scene in the Himalayas—clean design,
+        smooth experience, and powerful storytelling for gamers and orgs.
+      </p>
+      <div class="hero__actions">
+        <a href="registration.html" class="btn">Register Now</a>
+        <a href="events.html" class="btn btn--ghost">See Events</a>
+      </div>
+    </div>
+
+    <!-- Console Illustration (inline SVG so you don’t need external art) -->
+    <div class="hero__art">
+      <svg class="console" viewBox="0 0 560 320" aria-hidden="true">
+        <defs>
+          <linearGradient id="gBody" x1="0" x2="1">
+            <stop offset="0%" stop-color="#FF8C3A" />
+            <stop offset="100%" stop-color="#FFB048" />
+          </linearGradient>
+          <linearGradient id="gBtn" x1="0" x2="1">
+            <stop offset="0%" stop-color="#2AF6FF" />
+            <stop offset="100%" stop-color="#9CF0FF" />
+          </linearGradient>
+        </defs>
+        <!-- body -->
+        <rect x="40" y="80" rx="40" ry="40" width="480" height="160" fill="url(#gBody)" />
+        <!-- grips -->
+        <ellipse cx="90" cy="215" rx="70" ry="55" fill="#FF7A1F" />
+        <ellipse cx="470" cy="215" rx="70" ry="55" fill="#FF7A1F" />
+        <!-- dpad -->
+        <rect x="120" y="145" width="22" height="60" rx="6" fill="#0F1420" />
+        <rect x="110" y="164" width="60" height="22" rx="6" fill="#0F1420" />
+        <!-- sticks -->
+        <circle cx="240" cy="185" r="24" fill="#0F1420" />
+        <circle cx="320" cy="185" r="24" fill="#0F1420" />
+        <circle cx="240" cy="185" r="12" fill="url(#gBtn)" />
+        <circle cx="320" cy="185" r="12" fill="url(#gBtn)" />
+        <!-- action buttons -->
+        <circle cx="420" cy="160" r="12" fill="#0F1420" />
+        <circle cx="420" cy="160" r="5" fill="url(#gBtn)" />
+        <circle cx="440" cy="180" r="12" fill="#0F1420" />
+        <circle cx="440" cy="180" r="5" fill="url(#gBtn)" />
+        <circle cx="400" cy="180" r="12" fill="#0F1420" />
+        <circle cx="400" cy="180" r="5" fill="url(#gBtn)" />
+        <circle cx="420" cy="200" r="12" fill="#0F1420" />
+        <circle cx="420" cy="200" r="5" fill="url(#gBtn)" />
+      </svg>
+    </div>
+
+    <!-- abstract blobs like the reference -->
+    <span class="blob blob--tl"></span>
+    <span class="blob blob--tr"></span>
+    <span class="blob blob--br"></span>
+  </section>
+
+  <!-- FEATURE STRIP -->
+  <section class="strip">
+    <div class="strip__item">
+      <h3>FIFA</h3>
+      <p>1v1 & Clubs</p>
+    </div>
+    <div class="strip__item">
+      <h3>BGMI</h3>
+      <p>Squads & TDM</p>
+    </div>
+    <div class="strip__item">
+      <h3>Free Fire</h3>
+      <p>Clash & BR</p>
+    </div>
+    <div class="strip__item">
+      <h3>Valorant</h3>
+      <p>5v5 Competitive</p>
+    </div>
+  </section>
+
+  <!-- ABOUT (glassmorphism) -->
+  <section class="panel">
+    <div class="panel__content">
+      <h2>About Esports in Ladakh</h2>
+      <p>
+        Esports is surging globally. Ladakh Esports connects players, organizers, and
+        brands to build a professional circuit—events, training, streaming and
+        collegiate opportunities—with a design system that feels premium.
+      </p>
+    </div>
+  </section>
+
+  <!-- PLAYERS SECTION -->
+<section class="players">
+  <h2>Players Who Inspire</h2>
+  <div class="grid">
+    <article class="card" data-modal="modal-mortal">
+      <img src="./assests/Naman_Mathur_2024.png" alt="Naman MortaL Mathur">
+      <h4>Naman “MortaL” Mathur</h4>
+      <p>India • BGMI</p>
+    </article>
+    <article class="card" data-modal="modal-thug">
+      <img src="./assests/600px-8bit_thug.png" alt="Animesh Thug Agarwal">
+      <h4>Animesh “Thug” Agarwal</h4>
+      <p>India • BGMI</p>
+    </article>
+    <article class="card" data-modal="modal-faker">
+      <img src="./assests/faker-t1-lol.avif" alt="Faker">
+      <h4>Lee “Faker” Sang-hyeok</h4>
+      <p>South Korea • LoL</p>
+    </article>
+    <article class="card" data-modal="modal-bugha">
+      <img src="./assests/images.jpeg" alt="Bugha">
+      <h4>Kyle “Bugha” Giersdorf</h4>
+      <p>USA • Fortnite</p>
+    </article>
+  </div>
+</section>
+
+<!-- ORGS SECTION -->
+<section class="orgs">
+  <h2>Esports Organizations</h2>
+  <div class="grid">
+    <article class="card" data-modal="modal-ge">
+      <img src="./assests/GE.png" alt="Global Esports">
+      <h4>Global Esports</h4>
+      <p>India • Valorant, BGMI</p>
+    </article>
+    <article class="card" data-modal="modal-s8ul">
+      <img src="./assests/s8ul.webp" alt="Team S8uL">
+      <h4>Team S8uL</h4>
+      <p>India • BGMI, Valorant, CODM</p>
+    </article>
+    <article class="card" data-modal="modal-godlike">
+      <img src="./assests/godlike.jpg" alt="GodLike Esports">
+      <h4>GodLike Esports</h4>
+      <p>India • BGMI, CODM</p>
+    </article>
+    <article class="card" data-modal="modal-t1">
+      <img src="./assests/t1.png" alt="T1 Esports">
+      <h4>T1</h4>
+      <p>South Korea • Valorant, LoL</p>
+    </article>
+  </div>
+</section>
+
+<!-- BRANDS SECTION -->
+<section class="brands">
+  <h2>Gaming & Tech Brands</h2>
+  <div class="grid">
+    <article class="card" data-modal="modal-asus">
+      <img src="./assests/asus.webp" alt="ASUS ROG">
+      <h4>ASUS ROG</h4>
+      <p>Gaming Hardware • Global</p>
+    </article>
+    <article class="card" data-modal="modal-redbull">
+      <img src="./assests/redbull.webp" alt="Red Bull Esports">
+      <h4>Red Bull</h4>
+      <p>Energy • Global Sponsor</p>
+    </article>
+    <article class="card" data-modal="modal-iqoo">
+      <img src="./assests/iqoo.jpg" alt="iQOO">
+      <h4>iQOO</h4>
+      <p>Smartphones • India</p>
+    </article>
+    <article class="card" data-modal="modal-oppo">
+      <img src="./assests/oppo.jpg" alt="Oppo Esports">
+      <h4>Oppo</h4>
+      <p>Smartphones • BGMI Partner</p>
+    </article>
+  </div>
+</section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__cta">
+      <h3>Ready to Play?</h3>
+      <a href="registration.html" class="btn">Join the Circuit</a>
+    </div>
+    <div class="social">
+      <a href="#"><img src="/assests/OIP.jpeg" alt="Facebook" /></a>
+      <a href="#"><img src="/assests/instagram-logo-instagram-icon-transparent-free-png.webp" alt="Instagram" /></a>
+      <a href="#"><img src="/assests/761_twitter.jpg" alt="Twitter" /></a>
+      <a href="#"><img src="/assests/OIP.webp" alt="YouTube" /></a>
+    </div>
+    <p>© 2025 Ladakh Esports. All rights reserved.</p>
+  </footer>
+  <script defer src="script.js"></script>
+<!-- PLAYER MODALS -->
+<div id="modal-mortal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/Naman_Mathur_2024.png" alt="Mortal">
+    <h2>Naman “MortaL” Mathur</h2>
+    <p>Legendary BGMI player and streamer. Co-founder of S8UL Esports, known for his leadership and game sense.</p>
+  </div>
+</div>
+
+<div id="modal-thug" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/600px-8bit_thug.png" alt="Thug">
+    <h2>Animesh “Thug” Agarwal</h2>
+    <p>Co-founder of 8bit & S8UL. Influential in shaping India’s esports ecosystem with content and org building.</p>
+  </div>
+</div>
+
+<div id="modal-faker" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/faker-t1-lol.avif" alt="Faker">
+    <h2>Lee “Faker” Sang-hyeok</h2>
+    <p>One of the greatest League of Legends players. Mid-laner for T1 with multiple Worlds victories.</p>
+  </div>
+</div>
+
+<div id="modal-bugha" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/images.jpeg" alt="Bugha">
+    <h2>Kyle “Bugha” Giersdorf</h2>
+    <p>American Fortnite player, winner of the Fortnite World Cup 2019, global ambassador for esports growth.</p>
+  </div>
+</div>
+
+<!-- ORG MODALS -->
+<div id="modal-ge" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/GE.png" alt="GE">
+    <h2>Global Esports</h2>
+    <p>India’s premier esports org, competing in Valorant and BGMI with international recognition.</p>
+  </div>
+</div>
+
+<div id="modal-s8ul" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/s8ul.webp" alt="S8UL">
+    <h2>Team S8uL</h2>
+    <p>India’s largest gaming org, co-founded by Mortal, Thug, and Goldy. Competes in BGMI, Valorant, and more.</p>
+  </div>
+</div>
+
+<div id="modal-godlike" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/godlike.jpg" alt="GodLike">
+    <h2>GodLike Esports</h2>
+    <p>One of India’s dominant BGMI and CODM rosters with passionate fanbase and strong brand identity.</p>
+  </div>
+</div>
+
+<div id="modal-t1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/t1.png" alt="T1">
+    <h2>T1 Esports</h2>
+    <p>South Korea’s legendary org with strong Valorant and LoL teams. Home of Faker and multiple world titles.</p>
+  </div>
+</div>
+
+<!-- BRAND MODALS -->
+<div id="modal-asus" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/asus.webp" alt="ASUS">
+    <h2>ASUS ROG</h2>
+    <p>Republic of Gamers, a leading global gaming hardware brand powering esports worldwide.</p>
+  </div>
+</div>
+
+<div id="modal-redbull" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/redbull.webp" alt="Red Bull">
+    <h2>Red Bull</h2>
+    <p>Iconic energy drink brand known for sponsoring top-tier esports tournaments globally.</p>
+  </div>
+</div>
+
+<div id="modal-iqoo" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/iqoo.jpg" alt="iQOO">
+    <h2>iQOO</h2>
+    <p>Smartphone brand focusing on high-performance devices, actively supporting Indian esports events.</p>
+  </div>
+</div>
+
+<div id="modal-oppo" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <img src="./assests/oppo.jpg" alt="Oppo">
+    <h2>Oppo</h2>
+    <p>Chinese smartphone giant, official sponsor and partner for BGMI esports tournaments in India.</p>
+  </div>
+</div>
+
+</body>
+
+</html>
