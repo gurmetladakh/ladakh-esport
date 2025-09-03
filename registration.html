@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Register</title>
+  <title>Event Registration</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="fade-in">
   <div class="navbar">
-    <div class="logo">MySite</div>
+    <div class="logo">Ladakh Esports</div>
     <div>
       <a href="index.html">Home</a>
       <a href="contact.html">Contact</a>
@@ -19,18 +19,42 @@
 
   <div class="section">
     <div class="content">
-      <h1>Register</h1>
+      <h1>Register for Tournaments</h1>
       <form>
-        <input type="text" placeholder="Full Name*" required>
+        <!-- Player / Team Info -->
+        <input type="text" placeholder="Team / Player Name*" required>
         <input type="email" placeholder="Email*" required>
-        <input type="text" placeholder="Username*" required>
-        <input type="password" placeholder="Password*" required>
-        <input type="password" placeholder="Confirm Password*" required>
-        <button type="submit">Sign Up</button>
+        <input type="text" placeholder="Contact Number*" required>
+
+        <!-- Game Selection -->
+        <label for="game">Select Game*</label>
+        <select id="game" name="game" required>
+          <option value="">--Choose a Game--</option>
+          <option value="bgmi">BGMI</option>
+          <option value="valorant">Valorant</option>
+          <option value="fifa">FIFA</option>
+          <option value="freefire">Free Fire</option>
+        </select>
+
+        <!-- Mode Selection -->
+        <label for="mode">Select Mode*</label>
+        <select id="mode" name="mode" required>
+          <option value="">--Choose Mode--</option>
+          <option value="solo">Solo</option>
+          <option value="duo">Duo</option>
+          <option value="squad">Squad (4)</option>
+          <option value="5v5">5v5</option>
+        </select>
+
+        <!-- Extra details (like player IGN, IDs etc.) -->
+        <textarea placeholder="Enter Player IDs / Team Member Names*" rows="4" required></textarea>
+
+        <button type="submit">Register</button>
       </form>
     </div>
+
     <div class="illustration">
-      <img src="/assests/game-console-6603120_1280.jpg" alt="Game Console Illustration">
+      <img src="./assets/game-console-6603120_1280.jpg" alt="Game Console Illustration">
     </div>
   </div>
 </body>

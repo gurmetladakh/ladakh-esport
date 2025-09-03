@@ -9,34 +9,43 @@ window.addEventListener("DOMContentLoaded", () => {
   if (loader) {
     setTimeout(() => {
       loader.style.opacity = "0";
-      setTimeout(() => loader.style.display = "none", 500);
+      setTimeout(() => loader.style.display = "none", 400);
       body.classList.add("fade-in");
-    }, 1200);
+    }, 800);
   } else {
     body.classList.add("fade-in");
   }
 
   // Smooth navigation transitions
   document.querySelectorAll("a").forEach(link => {
-    if (link.hostname === window.location.hostname) {
-      link.addEventListener("click", e => {
-        const target = link.getAttribute("href");
-        if (!target || target.startsWith("#")) return;
+    const target = link.getAttribute("href");
 
-        e.preventDefault();
-        body.classList.remove("fade-in");
-        body.classList.add("fade-out");
-
-        setTimeout(() => {
-          window.location.href = target;
-        }, 400);
-      });
+    // Skip anchors, JS links, and external sites
+    if (!target || target.startsWith("#") || target.startsWith("javascript") || link.hostname !== window.location.hostname) {
+      return;
     }
+
+    link.addEventListener("click", e => {
+      e.preventDefault();
+      body.classList.remove("fade-in");
+      body.classList.add("fade-out");
+
+      setTimeout(() => {
+        window.location.href = target;
+      }, 400);
+    });
   });
 
   // =====================
   // Modal functionality
   // =====================
+  const closeModals = () => {
+    document.querySelectorAll(".modal").forEach(modal => {
+      modal.style.display = "none";
+    });
+  };
+
+  // Open modal
   document.querySelectorAll(".card[data-modal]").forEach(card => {
     card.addEventListener("click", () => {
       const modalId = card.getAttribute("data-modal");
@@ -45,25 +54,16 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Close modal (X button)
   document.querySelectorAll(".modal .close").forEach(btn => {
-    btn.addEventListener("click", () => {
-      btn.closest(".modal").style.display = "none";
-    });
+    btn.addEventListener("click", closeModals);
   });
 
-  // Close modal when clicking outside content
-  window.addEventListener("click", (e) => {
-    if (e.target.classList.contains("modal")) {
-      e.target.style.display = "none";
-    }
+  // Close modal on outside click or Escape key
+  window.addEventListener("click", e => {
+    if (e.target.classList.contains("modal")) closeModals();
   });
-
-  // Close modal on Escape key
-  window.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") {
-      document.querySelectorAll(".modal").forEach(modal => {
-        modal.style.display = "none";
-      });
-    }
+  window.addEventListener("keydown", e => {
+    if (e.key === "Escape") closeModals();
   });
 });
